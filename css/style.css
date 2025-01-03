@@ -1,0 +1,116 @@
+
+p {
+  font-size: 20px;
+  font-family: "Inter Semi Bold", serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border-right: none;
+}
+#advertisement {
+  color: red;
+  font-family: "Inter Semi Bold", serif;
+  font-size: 40px;
+}
+.content {
+  text-align: center;
+}
+button {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 10px auto;
+  padding: 0;
+  font-size: 20px;
+}
+#moviesLink img, #downloadCakeRecept img, #downloadManhunt img, #downloadPiglinTrades img {
+  vertical-align: middle;
+  height: auto;
+  width: 128px;
+}
+#moviesLink, button {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: sans-serif;
+  display: inline-block;
+}
+
+button img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+#incredible_working {
+  width: 30%;
+  display: block;
+  margin-top: 50px; /* Add a 10px margin only to the top of the image */
+  margin-right: auto; /* Center the image horizontally */
+  margin-left: auto; /* Center the image horizontally */
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+
+#mr-bean-peeking {
+  height: auto;
+  width: 300px;
+  position: fixed;
+  right: 0;
+}
+
+
+#donate-steam-items, #trade-tf2, #buy-items {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Inter Semi Bold", sans-serif;
+  font-size: 30px !important;
+  text-align: center; /* is that necessary code?*/
+}
+
+#darkMode, #donate-steam-items, #trade-tf2, #buy-items {
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-top: 20px;
+  vertical-align: middle;
+}
+
+#darkMode img, #trade-tf2 img, #buy-items img, #donate-steam-items img {
+  background-size: cover; /* Ensure the image covers the button */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-position: center; /* Center the image */
+  width: 128px;  /* Set button width */
+  height: 128px; /* Set button height */
+  border: none; /* Remove border */
+  margin: 10px auto;
+  vertical-align: middle;
+}
+
+#donate-steam-items img, #trade-tf2 img, #buy-items img {
+  height: auto;
+  width: 80px;
+  vertical-align: middle;
+  margin-bottom: 20px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Inter Semi Bold", sans-serif;
+  font-size: 30px !important;
+  text-align: center;
+  margin: 0 50px 20px;
+}
+
+a img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
