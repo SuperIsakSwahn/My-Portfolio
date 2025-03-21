@@ -108,9 +108,35 @@ a {
   text-align: center;
   margin: 0 50px 20px;
 }
+.text {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Inter Semi Bold", sans-serif;
+  font-size: 30px !important;
+  text-align: center;
+  margin: 0 50px 20px;
+  color: inherit; /* Keeps it the same color as the anchor */
+}
 
+.full-row {
+  display: block; /* Forces the button to take the full row */
+  width: fit-content; /* Keeps it from stretching too much */
+  margin: 10px auto; /* Centers it */
+}
 a img {
   width: 80px;
   height: auto;
   margin-bottom: 10px;
 }
+#swish_container {
+  text-align: center; /* Center the image */
+}
+
+#swish_img {
+  width: 10%; /* Start small */
+  max-width: 100%; /* Prevents it from overflowing */
+  transition: width 0.3s ease; /* Smooth transition */
+  cursor: pointer; /* Indicate it's clickable */
+  display: inline-block; /* Keep it centered */
+}
+
