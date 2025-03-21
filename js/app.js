@@ -1,4 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
+function toggleSize() {
+    let img = document.getElementById("swish_img");
+    if (img.style.width === "100%") {
+        img.style.width = "10%";
+    } else {
+        img.style.width = "100%";
+    }
+}document.addEventListener('DOMContentLoaded', function() {
     // Function to handle download button click
     function handleDownloadButtonClick(filePath, fileName) {
         // Create a link element
@@ -14,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const manhuntButton = document.getElementById('downloadManhunt');
     const piglinButton = document.getElementById('downloadPiglinTrades');
     const cakeButton = document.getElementById('downloadCakeRecept');
+
+
 
     // Add event listeners to the buttons
     manhuntButton.addEventListener('click', function() {
