@@ -5,16 +5,17 @@ function toggleSize() {
     } else {
         img.style.width = "100%";
     }
-}document.addEventListener('DOMContentLoaded', function() {
-    // Function to handle download button click
-    function handleDownloadButtonClick(filePath, fileName) {
-        // Create a link element
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to handle download button click via a background link element
+    function handleDownloadButtonClick(fileUrl) {
         const link = document.createElement('a');
-        link.href = filePath; // Path to the file
-        link.download = fileName; // Name of the file to be downloaded
+        link.href = fileUrl;
+        link.style.display = 'none';
         document.body.appendChild(link);
-        link.click(); // Trigger the click event
-        document.body.removeChild(link); // Clean up
+        link.click();
+        document.body.removeChild(link);
     }
 
     // Get the download buttons
@@ -22,18 +23,17 @@ function toggleSize() {
     const piglinButton = document.getElementById('downloadPiglinTrades');
     const cakeButton = document.getElementById('downloadCakeRecept');
 
-
-
-    // Add event listeners to the buttons
+    // Add event listeners with your Dropbox direct-download links
     manhuntButton.addEventListener('click', function() {
-        handleDownloadButtonClick('/downloads/ManhuntImproved.jar', 'ManhuntImproved.jar');
+        handleDownloadButtonClick('https://www.dropbox.com/scl/fi/blnjhxyzk1c6q0b8onhuz/ManhuntImproved-2.0.jar?rlkey=8x9l5vnx37e2zjkqlhxnbu1ox&e=1&dl=1');
     });
 
     piglinButton.addEventListener('click', function() {
-        handleDownloadButtonClick('/downloads/PiglinPearlDrops.jar', 'PiglinPearlDrops.jar');
+        handleDownloadButtonClick('https://www.dropbox.com/scl/fi/kfjj4hehn245jvzhlya3h/PiglinPearlDrops-1.0-SNAPSHOT.jar?rlkey=yardol3v82qwsy6cnlm5oz6up&dl=1');
     });
+
     cakeButton.addEventListener("click", function () {
-        handleDownloadButtonClick('/downloads/Milkfree chocolate cake prescription.txt', 'Milkfree chocolate cake prescription.txt');
+        handleDownloadButtonClick('https://www.dropbox.com/scl/fi/4cid4aiw4ctui9n2klpl6/Milkfree-chocolate-cake-prescription.txt?rlkey=tw5in7y92sitoflfnasdgp9c8&dl=1');
     });
 
     function toggleDarkMode() {
@@ -44,19 +44,21 @@ function toggleSize() {
     function updateButtonColor() {
         const isDarkMode = document.body.classList.contains('dark-mode');
         const buttons = document.querySelectorAll('button');
-        const anchors = document.querySelectorAll('a')
+        const anchors = document.querySelectorAll('a');
         anchors.forEach(a => {
             a.style.color = isDarkMode ? "#fff" : "black";
-        })
+        });
         buttons.forEach(button => {
             button.style.color = isDarkMode ? '#fff' : '';
-        })
+        });
     }
-    const darkModeButton = document.getElementById('darkMode')
 
-    darkModeButton.addEventListener('click',function () {
-        toggleDarkMode();
-    })
+    const darkModeButton = document.getElementById('darkMode');
+    if (darkModeButton) {
+        darkModeButton.addEventListener('click', function () {
+            toggleDarkMode();
+        });
+    }
+
     updateButtonColor();
-    toggleDarkMode();
 });
